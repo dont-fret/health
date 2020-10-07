@@ -17,7 +17,7 @@
         <property name="driverClassName" value="${jdbc.driver}"/>
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
-        <property name="url" value="jdbc.url"/>
+        <property name="url" value="${jdbc.url}"/>
     </bean>
     <!--配置mybatis与spring 整合-->
     <!--配置sqlSessionFactoryBean-->

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.CheckGroupMapper">
+
+    <!--添加检查组-->
+    <insert id="add" parameterType="com.example.pojo.CheckGroup">
+        <selectKey keyProperty="id" keyColumn="id" order="AFTER" resultType="int">
+            select LAST_INSERT_ID()
+        </selectKey>
+        insert into
+        t_checkgroup(code,name,sex,helpCode,remark,attention)
+        values
+        (#{code},#{name},#{sex},#{helpCode},#{remark},#{attention})
+    </insert>
+
+    <!--设置检查组关联的检查项-->
+    <insert id="setCheckGroupAndCheckItem" parameterType="java.util.Map">
+        insert into
+            t_checkgroup_checkitem(checkgroup_id,checkitem_id)
+        values
+            (#{checkGroupId},#{checkItemId})
+    </insert>
+    
+    <!--更新检查组-->
+    <update id="update" parameterType="com.example.pojo.CheckGroup">
+        update t_checkgroup
+        <set>
+            <if test="code != null">
+                code = #{code},
+            </if>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="helpCode != null">
+                helpCode = #{helpCode},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="remark != null">
+                remark = #{remark},
+            </if>
+            <if test="attention != null">
+                attention = #{attention},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--删除检查组关联的检查项-->
+    <delete id="deleteCheckItemIdsByCheckGroupId" parameterType="java.lang.Integer">
+        delete from t_checkgroup_checkitem where checkgroup_id = #{id}
+    </delete>
+
+    <!--删除检查组-->
+    <delete id="deleteCheckGroupById" parameterType="java.lang.Integer">
+        delete from t_checkgroup where id =#{id}
+    </delete>
+
+    <!--根据id查询检查组-->
+    <select id="selectById" parameterType="java.lang.Integer" resultType="com.example.pojo.CheckGroup">
+        select * from t_checkgroup where id = #{id}
+    </select>
+
+    <!--分页查询，根据条件查询-->
+    <select id="selectByCondition" parameterType="java.lang.String" resultType="com.example.pojo.CheckGroup">
+        select * from t_checkgroup
+        <if test="value != null and value != '' ">
+            where code = #{value} or name = #{value} or helpCode = #{value}
+        </if>
+    </select>
+
+    <!---->
+    <select id="selectAll" resultType="com.example.pojo.CheckGroup">
+        select * from t_checkgroup
+    </select>
+    
+</mapper>
