@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ecaa9493-6ea6-4109-9459-9948a188930f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\maven\repositorys" />
+        <option name="mavenHome" value="E:/maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="E:\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iXP82z9NS5I7Y6kZyjETlCoiE8" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/health_backend/src/main/webapp/WEB-INF" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ecaa9493-6ea6-4109-9459-9948a188930f" name="Default Changelist" comment="" />
+      <created>1602050800423</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602050800423</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="474" y="77" key="FileChooserDialogImpl" timestamp="1602051746922">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="474" y="77" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1602051746922" />
+    <state x="323" y="66" key="NewModule_or_Project.wizard" timestamp="1602051253145">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="323" y="66" key="NewModule_or_Project.wizard/0.0.1366.738@0.0.1366.738" timestamp="1602051253145" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1602051771697">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1602051771697" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1602051464096">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1602051464096" />
+  </component>
+</project>
