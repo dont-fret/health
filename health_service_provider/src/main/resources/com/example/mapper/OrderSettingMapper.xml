@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.OrderSettingMapper">
+
+    <select id="findCountByOrderDate" parameterType="java.lang.String" resultType="java.lang.Long">
+        select count(id) from t_ordersetting where orderDate = #{orderDate}
+    </select>
+
+    <update id="editNumberByOrderDate" parameterType="com.example.pojo.OrderSetting">
+        update t_ordersetting set number = #{number} where orderDate = date_format(#{orderDate},'%Y-%m-%d')
+    </update>
+
+    <insert id="add" parameterType="com.example.pojo.OrderSetting">
+        insert into t_ordersetting
+            (orderDate,number,reservations)
+        values
+            (#{orderDate},#{number},#{reservations})
+    </insert>
+
+    <select id="getOrderSettingByMonth" parameterType="java.util.Map"
+            resultType="com.example.pojo.OrderSetting">
+        select * from t_ordersetting where orderDate between #{begin} and #{end}
+    </select>
+</mapper>

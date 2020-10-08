@@ -292,14 +292,21 @@ public class DateUtils {
      * @return
      * @throws ParseException
      */
-    public static Date getLastDay4ThisMonth(String month) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM");
+    public static Date getLastDay4ThisMonth(String month,String pattern) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
         Calendar cal = Calendar.getInstance();
         cal.setTime(sdf.parse(month));
         cal.set(cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),1);
         cal.add(Calendar.MONTH,1);
         cal.add(Calendar.DAY_OF_MONTH,-1);
 
+        return cal.getTime();
+    }
+    public static Date getFirstDay4ThisMonth(String date,String pattern) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(sdf.parse(date));
+        cal.set(cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),1);
         return cal.getTime();
     }
 
